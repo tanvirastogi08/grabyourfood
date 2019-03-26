@@ -22,15 +22,14 @@ html {
   text-rendering: optimizeLegibility
 }
 
-.clearfix {zoom: 1;}
-/* TO-ASK: if I use this clearfix property with the section-meal property
-it won't work. S5L13 */
-.clearfix {
-  content: '.';
+/* TODO: Needed afterwards */
+/* .clearfix {zoom: 1;} */
+
+.clearfix:after {
+  content: '';
   clear: both;
   display: block;
   height: 0;
-  visibility: hidden;
 }
 
 .row {
@@ -86,6 +85,7 @@ header {
 }
 
 .main-nav li {
+  /* inline-block allows to set the height and width of the element as compare to inline element */
   display: inline-block;
   margin-left: 40px;
 }
@@ -162,10 +162,9 @@ h2:after {
   display: block;
   height: 2px;
   background-color: #e67e22;
-  /* TO-ASK why this 100% is not fit in full screen */
   width: 100px;
   margin: 0 auto;
-  /* TO-ASK when we have margin bottom set on h2 then why here? */
+  /* TO-CHECK when we have margin bottom set on h2 then why here? */
   margin-top: 30px;
 }
 
@@ -175,7 +174,6 @@ h3 {
 }
 
 .long-copy {
-  /* TO-ASK: actual use-case of line-height */
   line-height: 145%;
   width: 70%;
   margin-left: 15%;
@@ -270,6 +268,8 @@ input[type=submit]:active {
    margin-bottom: 30px;
 }
 
+/* MEALS SECTION */
+
 .section-meals {
   padding: 0;
 }
@@ -288,7 +288,8 @@ input[type=submit]:active {
 .meal-photo {
   width: 100%;
   margin: 0;
-  /* TODO: check the exact reason for why this property exactly needed. */
+  /* this property is needed to fit-in the images into the parent container
+   which are scaled out(115%) > parent container(100%)*/
   overflow: hidden;
   background-color: #000;
 }
@@ -299,14 +300,18 @@ input[type=submit]:active {
   /* this is to completely fit-in the image into it's parent container */
   width: 100%;
   height: auto;
+  /* 1.15 means 115% */
   transform: scale(1.15);
   transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
   opacity: 1;
+  /* 1.03 is given intentionally to avoid the gap below the image visible on-screen */
   transform: scale(1.03);
 }
+
+/* SECTION: STEPS SECTION */
 
 .section-steps {
   background-color: #f4f4f4;
@@ -341,18 +346,19 @@ input[type=submit]:active {
 
 .instruction-box div {
   color: #e67e22;
-  /* TO-ASK: number and paragraphs are not aligned in one line,
-  display: inline-block and float property do not work together. So, how to fix that? */
-  /* display: inline-block; */
   border: 2px solid #e67e22;
   border-radius: 50%;
-  height: 55px;
-  width: 55px;
+  height: 40px;
+  width: 40px;
   text-align: center;
-  /* float: left !important; */
+  float: left;
   padding: 5px;
-  font-size: 150%;
+  font-size: 100%;
   margin-right: 25px;
+}
+
+.instruction-box p {
+  font-size: 100%;
 }
 
 .btn-app:link,
@@ -418,6 +424,8 @@ cite img {
   vertical-align: middle;
 }
 
+/* SECTION: Meal Plans Section */
+
 .section-plans {
   /* padding: 0; */
   background-color: #f4f4f4;
@@ -428,7 +436,7 @@ cite img {
   border-radius: 5px;
   width: 90%;
   margin-left: 5%;
-  /* x-axis,y-axis blur and the color  */
+  /* x-axis, y-axis, blur and the color  */
   box-shadow: 0 2px 2px #e3e3e3;
 }
 
@@ -508,7 +516,6 @@ footer {
 
 .footer-nav {
   list-style: none;
-  /* inline-block allows to set the height and width of the element as compare to inline element */
   float: left;
 }
 
