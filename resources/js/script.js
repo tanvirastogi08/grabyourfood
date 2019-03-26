@@ -23,7 +23,6 @@ $(document).ready(function() {
     /**
      * for button scroll
      */
-
     $('.js--scroll-to-plan').click(function() {
         $('html, body')
             .animate({ scrollTop: $('.js--section-plans').offset().top }, 1000)
