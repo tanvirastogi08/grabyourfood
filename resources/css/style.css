@@ -58,7 +58,6 @@ header {
   width: 1140px;
   top: 50%;
   left: 50%;
-  /* TODO: look this prop once more */
   transform: translate(-50%, -50%)
 }
 
@@ -96,6 +95,8 @@ header {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
+  /* defining font-size in % means that it's going to consider
+    the body/html font-size as its base size  */
   font-size: 90%;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s;
@@ -328,20 +329,13 @@ input[type=submit]:active {
   margin-top: 70px;
 }
 
-.instruction-box {
-  list-style: none;
-}
-
 .app-screen {
   width: 40%;
 }
 
 .instruction-box {
+  list-style: none;
   margin-bottom: 50px;
-}
-
-.instruction-box:last-of-type {
-  margin-bottom: 80px;
 }
 
 .instruction-box div {
@@ -361,13 +355,17 @@ input[type=submit]:active {
   font-size: 100%;
 }
 
+.instruction-box:last-of-type {
+  margin-bottom: 80px;
+}
+
 .btn-app:link,
 .btn-app:visited {
   border: 0;
 }
 
 .btn-app img {
-  height: 50px;
+  height: 48px;
   width: auto;
   margin-right: 10px;
 }
