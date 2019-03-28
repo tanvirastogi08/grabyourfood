@@ -81,25 +81,23 @@ header {
   float: right;
   list-style: none;
   margin-top: 55px;
-}
-
-.main-nav li {
-  /* inline-block allows to set the height and width of the element as compare to inline element */
-  display: inline-block;
-  margin-left: 40px;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-  padding: 8px 0;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  /* defining font-size in % means that it's going to consider
-    the body/html font-size as its base size  */
-  font-size: 90%;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s;
+  li {
+    /* inline-block allows to set the height and width of the element as compare to inline element */
+    display: inline-block;
+    margin-left: 40px;
+    a:link,
+    a:visited {
+      padding: 8px 0;
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      /* defining font-size in % means that it's going to consider
+        the body/html font-size as its base size  */
+      font-size: 90%;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.2s;
+    }
+  }
 }
 
 .main-nav li a:hover,
@@ -113,7 +111,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(255, 255, 255, 0.98);
+  background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
 }
@@ -386,7 +384,7 @@ input[type=submit]:active {
 }
 
 .section-testimonials {
-  background-image: linear-gradient(rgb(0,0,0,0.8), rgb(0,0,0,0.8)), url("img/back-customers.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("img/back-customers.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
