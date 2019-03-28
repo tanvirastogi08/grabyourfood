@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ['@babel/polyfill', './index.js'],
@@ -14,7 +15,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './index.html'
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: './resources/css/img', to: 'images' }
+        ])
     ],
     module: {
         rules: [
