@@ -33,4 +33,13 @@ $(document).ready(function() {
         $('html, body')
             .animate({ scrollTop: $('.js--section-features').offset().top }, 1000)
     });
+
 });
+
+/** Navigation */
+function citiesFun(pathName) {
+    cities.innerHTML = window.mycity;
+    console.log('cities', window.location.origin + pathName);
+        $('html, body')
+            .animate({ scrollTop: $('#cities').offset().top }, 1000)
+}

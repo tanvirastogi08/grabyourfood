@@ -17,7 +17,8 @@ module.exports = {
             template: './index.html'
         }),
         new CopyWebpackPlugin([
-            { from: './resources/css/img', to: 'images' }
+            { from: './resources/css/img', to: 'images' },
+            { from: './resources/js', to: 'js' }
         ])
     ],
     module: {
@@ -40,7 +41,12 @@ module.exports = {
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
                 use: ['file-loader']
+            },
+            {
+                test: /\.hbs$/,
+                loader: "handlebars-loader"
             }
+            
         ]
     }
 };
@@ -56,3 +62,14 @@ module.exports = {
 **/
 // __dirname is the current absolute path
 // Note: use loader for converting SASS to css (in webpack)
+
+// {
+//     test: /\.html$/,
+//     exclude:[ /node_modules/, require.resolve('./index.html')],
+//     use: {
+//         loader: 'file-loader',
+//         query: {
+//             name: '[name].[ext]'
+//         },
+//     }
+// }

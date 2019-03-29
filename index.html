@@ -9,7 +9,6 @@
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
     </script>
-    <script src="resources/js/script.js"></script>
     <title>OmniFood</title>
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
@@ -25,7 +24,7 @@
           <ul class="main-nav">
             <li><a href="#/section-plans">Food delivery</a></li>
             <li><a href="#/section-steps">How it works</a></li>
-            <li><a href="#/section-cities">Our cities</a></li>
+            <li><a href="#/cities" onclick="citiesFun('/cities')">Our cities</a></li>
             <li><a href="#/sign-up">Sign up</a></li>
           </ul>
         </div>
@@ -145,77 +144,7 @@
         </div>
       </div>
     </section>
-    <section class="section-cities" id="/section-cities">
-      <div class="row">
-        <h2>Cities &mdash; We are currently in these cities</h2>
-      </div>
-      <div class="row">
-        <div class="col span-1-of-4 box">
-          <img src="images/lisbon-3.jpg" alt="lisbon">
-          <h3>Lisbon</h3>
-          <div class="city-feature">
-            <ion-icon name="contact" class="icon-small"></ion-icon>
-            <span>1600+ happy eaters</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="star" class="icon-small"></ion-icon>
-            <span>60+ top chefs</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="logo-twitter" class="icon-small"></ion-icon>
-            <a href="#">@omnifood_lx</a>
-          </div>
-        </div>
-        <div class="col span-1-of-4 box">
-          <img src="images/san-francisco.jpg" alt="san-francisco">
-          <h3>San Francisco</h3>
-          <div class="city-feature">
-            <ion-icon name="contact" class="icon-small"></ion-icon>
-            <span>3700+ happy eaters</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="star" class="icon-small"></ion-icon>
-            <span>160+ top chefs</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="logo-twitter" class="icon-small"></ion-icon>
-            <a href="#">@omnifood_sf</a>  
-          </div>            
-        </div>
-        <div class="col span-1-of-4 box">
-          <img src="images/berlin.jpg" alt="berlin">
-          <h3>Berlin</h3>
-          <div class="city-feature">
-            <ion-icon name="contact" class="icon-small"></ion-icon>
-            <span>2300+ happy eaters</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="star" class="icon-small"></ion-icon>
-            <span>110+ top chefs</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="logo-twitter" class="icon-small"></ion-icon>
-            <a href="#">@omnifood_berlin </a>
-          </div>
-        </div>
-        <div class="col span-1-of-4 box">
-          <img src="images/london.jpg" alt="london">
-          <h3>London</h3>
-          <div class="city-feature">
-            <ion-icon name="contact" class="icon-small"></ion-icon>
-            <span>1200+ happy eaters</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="star" class="icon-small"></ion-icon>
-            <span>50+ top chefs</span>
-          </div>
-          <div class="city-feature">
-            <ion-icon name="logo-twitter" class="icon-small"></ion-icon>
-            <a href="#">@omnifood_london</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section-cities" id="cities"></section>
     <section class="section-testimonials">
       <div class="row">
         <h2>Our customers can't live without us</h2>
@@ -407,5 +336,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
