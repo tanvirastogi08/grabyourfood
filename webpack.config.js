@@ -14,7 +14,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './index.html'
+            template: './index.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'plan.html',
+            template: './plan.html',
         }),
         new CopyWebpackPlugin([
             { from: './resources/css/img', to: 'images' },
